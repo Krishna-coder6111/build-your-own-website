@@ -1,8 +1,7 @@
 body {
   color: #222;
   display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Papyrus", fantasy;
   background-color: #fefefe;
 }
 
@@ -12,16 +11,20 @@ body {
   padding: 2em;
 }
 
-.two-column {
-  display: flex;
-  justify-content: space-between;
-  gap: 1em;
-  align-items: center;
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 @media screen and (max-width: 600px) {
-  .two-column {
-    flex-direction: column;
+  .column {
+    width: 100%;
   }
   .photo {
     width: 100%;
